@@ -1,1 +1,1 @@
-My Python exercises. 
+My Python exercises. :)
