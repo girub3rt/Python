@@ -1,3 +1,7 @@
+#High Score -systeemi on vielä wonky.
+#Pitäisi myös olla tarkistus minNum ja maxNum välillä.
+#Ja jos viimeinen arvaus on oikein, pelin pitäisi päättyä onnistumiseen.
+
 import random
 
 def get_highScore() -> int:
