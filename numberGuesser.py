@@ -4,6 +4,7 @@
 import random
 
 def get_highScore() -> int:
+    """Hakee korkeimman tuloksen tiedostosta"""
     filename = "numberGuesserScore.txt"
     with open(filename, "r") as file:
         val = file.read()
@@ -14,6 +15,7 @@ def get_highScore() -> int:
     return highScore
 
 def set_score(highScore) -> None:
+    """Kirjoittaa tiedostoon uuden korkean tuloksen"""
     with open("numberGuesserScore.txt", "w") as file:
         file.write(str(highScore))
 
@@ -42,7 +44,8 @@ while True:
     except ValueError:
         print("Please enter a number.")
 
-guessAmount -= 1
+guessAmount -= 1 #Koska ensimmäinenkin arvaus lasketaan. ;)
+
 numberGuess = random.randint(minNum, maxNum)
 
 while True:
