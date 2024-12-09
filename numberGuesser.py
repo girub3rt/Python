@@ -32,9 +32,17 @@ while True:
     except ValueError:
         print("Please enter a number.")
 
-guessAmount = int(input("Enter how many guesses: "))
-guessAmount -= 1
+while True:
+    try:
+        guessAmount = int(input("Enter how many guesses: "))
+        if guessAmount == 0:
+            print("Please enter a number greater than zero.")
+        else:
+            break
+    except ValueError:
+        print("Please enter a number.")
 
+guessAmount -= 1
 numberGuess = random.randint(minNum, maxNum)
 
 while True:
